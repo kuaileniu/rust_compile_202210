@@ -6,6 +6,7 @@ rust 交叉编译
 cargo new hello
 
 # 准备交叉编译环境（macos）
+brew update   
 
 brew install FiloSottile/musl-cross/musl-cross  
 brew install mingw-w64 
