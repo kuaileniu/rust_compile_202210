@@ -23,8 +23,14 @@ linker = "x86_64-linux-musl-gcc"
 
 # 交叉编译
 cd hello
+
+- 编译linux环境文件
 cargo build --target=x86_64-unknown-linux-musl --release
 编译后的可执行文件： hello/target/x86_64-unknown-linux-musl/release/hello
+
+- 编译windows环境文件
+cargo build  --release --target=x86_64-pc-windows-gnu
+编译后的可执行文件： hello/target/x86_64-pc-windows-gnu/release/hello.exe
 
 # 编译本机环境
 cd hello
