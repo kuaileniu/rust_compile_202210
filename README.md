@@ -13,23 +13,27 @@ brew update
 brew install FiloSottile/musl-cross/musl-cross  
 brew install mingw-w64 
 brew install filosottile/musl-cross/musl-cross
-rustup target add x86_64-unknown-linux-musl
+rustup target list                                     // 查看支持的平台
+rustup target add x86_64-unknown-linux-musl            // 为编译linux环境的文件作准备
+rustup target add target.x86_64-pc-windows-gnu        // 为编译windows环境的文件作准备
 
 mkdir hello/.cargo && cd hello/.cargo && touch config.toml
 在 config.toml中添加
 
 [target.x86_64-unknown-linux-musl]
 linker = "x86_64-linux-musl-gcc"
+‘[target.x86_64-pc-windows-gnu]
+linker = "x86_64-w64-mingw32-gcc"
 
 # 交叉编译
 cd hello
 
 - 编译linux环境文件
-cargo build --target=x86_64-unknown-linux-musl --release
+cargo build  --release --target=x86_64-unknown-linux-musl
 编译后的可执行文件： hello/target/x86_64-unknown-linux-musl/release/hello
 
 - 编译windows环境文件
-cargo build  --release --target=x86_64-pc-windows-gnu
+cargo build --release --target=x86_64-pc-windows-gnu
 编译后的可执行文件： hello/target/x86_64-pc-windows-gnu/release/hello.exe
 
 # 编译本机环境
