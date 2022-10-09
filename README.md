@@ -1,7 +1,9 @@
 # rust_compile_202210
 rust 交叉编译
 
-
+# Rust交叉编译Mac编译Linux/Windows平台
+- Rust交叉编译Mac编译Linux/Windows平台 https://blog.51cto.com/u_15057820/4540650
+- https://github.com/japaric/rust-cross
 # 创建项目
 cargo new hello
 
