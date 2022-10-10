@@ -13,6 +13,7 @@ brew update
 
 Windows10下编译Linux的程序 下载安装 https://musl.cc/x86_64-linux-musl-cross.tgz (用的是这个)  ；
  https://musl.cc/x86_64-w64-mingw32-cross.tgz  ; 
+ https://musl.cc/x86_64-w64-mingw32-native.zip ; 
  https://wenku.baidu.com/view/571f57cde309581b6bd97f19227916888486b9d1.html
 brew install FiloSottile/musl-cross/musl-cross  
 brew install mingw-w64 
